@@ -37,7 +37,7 @@ void _Finalize(napi_env env, void* data, void* hint) {
 
 template<typename CallbackParam>
 void Synchronized(Napi::Env env, const AsyncFn<CallbackParam>& async_fn, SyncFn<CallbackParam> sync_fn) {
-  holder_t<CallbackParam>* holder = new holder_t<CallbackParam> {std::forward<SyncFn<CallbackParam>>(sync_fn)};
+  holder_t<CallbackParam>* holder = new holder_t<CallbackParam> {std::move(sync_fn)};
 
   napi_value cb;
   CHECK_NAPI(napi_create_function(env, nullptr, NAPI_AUTO_LENGTH, _Callback<CallbackParam>, holder, &cb));
