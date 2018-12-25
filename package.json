@@ -1,0 +1,29 @@
+{
+  "name": "napi-experimental",
+  "version": "1.0.0",
+  "description": "Some experimental NAPI tests",
+  "main": "index.js",
+  "scripts": {
+    "compile": "cmake-js compile --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaAitch/napi-experimental.git"
+  },
+  "keywords": [
+    "napi",
+    "nodejs",
+    "node-addon-api"
+  ],
+  "author": "Philipp Renoth <renoth@wildoak.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DaAitch/napi-experimental/issues"
+  },
+  "homepage": "https://github.com/DaAitch/napi-experimental#readme",
+  "dependencies": {
+    "bindings": "^1.3.1",
+    "cmake-js": "^4.0.1",
+    "node-addon-api": "^1.6.2"
+  }
+}
